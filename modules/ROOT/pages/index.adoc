@@ -1,22 +1,23 @@
-= An Example Quick Course
+=  Red Hat OpenStack Platform (RHOSP) Basics
 :navtitle: Home
 
 == Introduction
 
-Course Title: Course title FIXME
+Course Title:  Red Hat OpenStack Platform (RHOSP) Basics
 
 Description:
 Course description FIXME
 
 Duration: FIXME hours
 
-== Objectives
+== Topics covered in this course
 
-On completing this course, you should be able to:
 
-* Observable, measurable objective...
-* Observable, measurable objective...
-* Observable, measurable objective...
+*  Understand the architecture and components of RHOSP
+
+*  Hands-on Lab
+
+
 
 == Prerequisites
 

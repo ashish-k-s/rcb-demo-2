@@ -1,0 +1,9 @@
+#  Understand the architecture and components of RHOSP
+
+- Red Hat OpenStack Platform (RHOSP) is an open-source cloud computing platform that controls pools of computing, storage, and networking resources.
+- Its architecture is based on a set of core services that provide essential functionality, including Nova for compute, Cinder for block storage, Glance for image service, Neutron for networking, and Keystone for identity service.
+- The OpenStack services are organized into these main categories: compute, networking, storage, and dashboard.
+- RHOSP also includes director, a tool for deploying and operating OpenStack clouds at scale, and Heat, an orchestration service to automate the deployment and scaling of applications.
+- Understanding these components and their interactions is crucial for effective installation, configuration, and management of RHOSP.
+- The architecture supports a modular design, allowing for flexibility and scalability in cloud deployments.
+- Familiarity with this architecture prepares users for hands-on labs involving RHOSP setup and networking configuration.

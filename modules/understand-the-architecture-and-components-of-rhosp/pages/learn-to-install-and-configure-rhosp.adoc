@@ -1,0 +1,54 @@
+#  Learn to install and configure RHOSP
+
+== Learn to Install and Configure Red Hat OpenStack Platform (RHOSP)
+
+Red Hat OpenStack Platform (RHOSP) is a commercially supported distribution of the OpenStack cloud computing platform, designed to operate at high scale and efficiency. This section will guide you through the process of installing and configuring RHOSP.
+
+### 1. Prerequisites
+
+Before diving into the installation and configuration process, ensure you have the following prerequisites in place:
+
+- A system meeting the [minimum hardware requirements](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.1/html/architecture_guide/chap-requirements#hardware-requirements).
+- A Red Hat Enterprise Linux (RHEL) server subscription.
+- A user with sudo privileges.
+- Basic understanding of Linux command line and networking concepts.
+
+### 2. Installation
+
+#### 2.1. Prepare the Undercloud
+
+The undercloud is a lightweight control node that provisions and manages the overcloud (the actual OpenStack services).
+
+1. **Subscribe to Red Hat Subscription Manager**:
+   ```bash
+   subscription-manager register --username <username> --password <password>
+   ```
+
+2. **Enable necessary repositories**:
+   ```bash
+   subscription-manager repos --enable=openstack-16-for-rhel-8-x86_64-rpms
+   ```
+
+3. **Install the Red Hat OpenStack Platform director packages**:
+   ```bash
+   yum install -y openstack-tripleo-heat-templates
+   ```
+
+#### 2.2. Provision the Overcloud
+
+The overcloud is where the actual OpenStack services run.
+
+1. **Create a director configuration file** (`/home/stack/templates/overcloud-baremetal-deploy.yaml`) with the necessary network, NIC, and server details.
+
+2. **Deploy the overcloud**:
+   ```bash
+   openstack overcloud deploy --templates --answer-file /home/stack/templates/overcloud-baremetal-deploy.yaml
+   ```
+
+3. **Wait for the deployment to complete**. This process can take a while, as it involves provisioning and configuring multiple virtual machines and services.
+
+### 3. Configuration
+
+#### 3.1. Access the OpenStack Dashboard
+
+After the overcloud deployment is complete, access the

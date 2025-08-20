@@ -1,6 +1,6 @@
 site:
-  title: FIXME Course Title
-  start_page: REPLACEREPONAME::index.adoc
+  title:  Red Hat OpenStack Platform (RHOSP) Basics
+  start_page: rcb-demo-2::index.adoc
 
 content:
   sources:

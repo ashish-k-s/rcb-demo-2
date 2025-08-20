@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Learn to install and configure RHOSP :: Red Hat OpenStack Platform (RHOSP) Basics</title>
+    <link rel="prev" href="understand-the-architecture-and-components-of-rhosp.html">
+    <link rel="next" href="explore-rhosp-networking-concepts.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenStack Platform (RHOSP) Basics</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-demo-2" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../hands-on-lab/hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/configuring-networking.html">Configuring Networking</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../hands-on-lab/hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/configuring-networking.html">Configuring Networking</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenStack Platform (RHOSP) Basics</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a></li>
+    <li><a href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a></li>
+    <li><a href="learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Learn to install and configure RHOSP</h1>
+<div class="sect1">
+<h2 id="_learn_to_install_and_configure_red_hat_openstack_platform_rhosp"><a class="anchor" href="#_learn_to_install_and_configure_red_hat_openstack_platform_rhosp"></a>Learn to Install and Configure Red Hat OpenStack Platform (RHOSP)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Red Hat OpenStack Platform (RHOSP) is a commercially supported distribution of the OpenStack cloud computing platform, designed to operate at high scale and efficiency. This section will guide you through the process of installing and configuring RHOSP.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_prerequisites"><a class="anchor" href="#_1_prerequisites"></a>1. Prerequisites</h3>
+<div class="paragraph">
+<p>Before diving into the installation and configuration process, ensure you have the following prerequisites in place:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A system meeting the [minimum hardware requirements](<a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.1/html/architecture_guide/chap-requirements#hardware-requirements" class="bare">https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.1/html/architecture_guide/chap-requirements#hardware-requirements</a>).</p>
+</li>
+<li>
+<p>A Red Hat Enterprise Linux (RHEL) server subscription.</p>
+</li>
+<li>
+<p>A user with sudo privileges.</p>
+</li>
+<li>
+<p>Basic understanding of Linux command line and networking concepts.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_installation"><a class="anchor" href="#_2_installation"></a>2. Installation</h3>
+<div class="sect3">
+<h4 id="_2_1_prepare_the_undercloud"><a class="anchor" href="#_2_1_prepare_the_undercloud"></a>2.1. Prepare the Undercloud</h4>
+<div class="paragraph">
+<p>The undercloud is a lightweight control node that provisions and manages the overcloud (the actual OpenStack services).</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Subscribe to Red Hat Subscription Manager</strong>:
+<code><code>bash
+subscription-manager register --username &lt;username&gt; --password &lt;password&gt;
+</code></code></p>
+</li>
+<li>
+<p><strong>Enable necessary repositories</strong>:
+<code><code>bash
+subscription-manager repos --enable=openstack-16-for-rhel-8-x86_64-rpms
+</code></code></p>
+</li>
+<li>
+<p><strong>Install the Red Hat OpenStack Platform director packages</strong>:
+<code><code>bash
+yum install -y openstack-tripleo-heat-templates
+</code></code></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_provision_the_overcloud"><a class="anchor" href="#_2_2_provision_the_overcloud"></a>2.2. Provision the Overcloud</h4>
+<div class="paragraph">
+<p>The overcloud is where the actual OpenStack services run.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Create a director configuration file</strong> (<code>/home/stack/templates/overcloud-baremetal-deploy.yaml</code>) with the necessary network, NIC, and server details.</p>
+</li>
+<li>
+<p><strong>Deploy the overcloud</strong>:
+<code><code>bash
+openstack overcloud deploy --templates --answer-file /home/stack/templates/overcloud-baremetal-deploy.yaml
+</code></code></p>
+</li>
+<li>
+<p><strong>Wait for the deployment to complete</strong>. This process can take a while, as it involves provisioning and configuring multiple virtual machines and services.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_configuration"><a class="anchor" href="#_3_configuration"></a>3. Configuration</h3>
+<div class="sect3">
+<h4 id="_3_1_access_the_openstack_dashboard"><a class="anchor" href="#_3_1_access_the_openstack_dashboard"></a>3.1. Access the OpenStack Dashboard</h4>
+<div class="paragraph">
+<p>After the overcloud deployment is complete, access the#  Learn to install and configure RHOSP</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_learn_to_install_and_configure_red_hat_openstack_platform_rhosp_2"><a class="anchor" href="#_learn_to_install_and_configure_red_hat_openstack_platform_rhosp_2"></a>Learn to Install and Configure Red Hat OpenStack Platform (RHOSP)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Red Hat OpenStack Platform (RHOSP) is a commercially supported distribution of the OpenStack cloud computing platform, designed to operate at high scale and efficiency. This section will guide you through the process of installing and configuring RHOSP.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_prerequisites_2"><a class="anchor" href="#_1_prerequisites_2"></a>1. Prerequisites</h3>
+<div class="paragraph">
+<p>Before diving into the installation and configuration process, ensure you have the following prerequisites in place:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A system meeting the [minimum hardware requirements](<a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.1/html/architecture_guide/chap-requirements#hardware-requirements" class="bare">https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/16.1/html/architecture_guide/chap-requirements#hardware-requirements</a>).</p>
+</li>
+<li>
+<p>A Red Hat Enterprise Linux (RHEL) server subscription.</p>
+</li>
+<li>
+<p>A user with sudo privileges.</p>
+</li>
+<li>
+<p>Basic understanding of Linux command line and networking concepts.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_installation_2"><a class="anchor" href="#_2_installation_2"></a>2. Installation</h3>
+<div class="sect3">
+<h4 id="_2_1_prepare_the_undercloud_2"><a class="anchor" href="#_2_1_prepare_the_undercloud_2"></a>2.1. Prepare the Undercloud</h4>
+<div class="paragraph">
+<p>The undercloud is a lightweight control node that provisions and manages the overcloud (the actual OpenStack services).</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Install Red Hat Enterprise Linux (RHEL) Server</strong> on your chosen server.</p>
+</li>
+<li>
+<p><strong>Register and subscribe</strong> the server to Red Hat Subscription Management.</p>
+</li>
+<li>
+<p><strong>Install the Red Hat OpenStack Platform director</strong> packages using the following command:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```bash
+sudo yum install -y redhat-openstack-director
+```</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_configure_the_undercloud"><a class="anchor" href="#_2_2_configure_the_undercloud"></a>2.2. Configure the Undercloud</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Run the undercloud installation script</strong>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```bash
+openstack-install-undercloud --config-file /usr/share/openstack-ansible/undercloud.conf
+```</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Configure the undercloud</strong> by editing the <code>/home/stack/undercloud.conf</code> file. Ensure you set the correct network interfaces, IP addresses, and passwords.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_provision_the_overcloud"><a class="anchor" href="#_2_3_provision_the_overcloud"></a>2.3. Provision the Overcloud</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Deploy the overcloud</strong> using the following command:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```bash
+openstack-ansible setup-overcloud --stack-user admin --stack-password &lt;password&gt; --config-file /home/stack/overcloud.conf
+```</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Monitor the deployment</strong> using the <code>openstack-ansible setup-overcloud --limit all</code> command.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_configuration_2"><a class="anchor" href="#_3_configuration_2"></a>3. Configuration</h3>
+<div class="sect3">
+<h4 id="_3_1_initial_configuration"><a class="anchor" href="#_3_1_initial_configuration"></a>3.1. Initial Configuration</h4>
+<div class="paragraph">
+<p>After the overcloud deployment,</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a></span>
+  <span class="next"><a href="explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

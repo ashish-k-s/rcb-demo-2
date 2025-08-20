@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Explore RHOSP networking concepts :: Red Hat OpenStack Platform (RHOSP) Basics</title>
+    <link rel="prev" href="learn-to-install-and-configure-rhosp.html">
+    <link rel="next" href="understand-the-architecture-and-components-of-rhosp.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenStack Platform (RHOSP) Basics</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-demo-2" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../hands-on-lab/hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/configuring-networking.html">Configuring Networking</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../hands-on-lab/hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hands-on-lab/configuring-networking.html">Configuring Networking</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenStack Platform (RHOSP) Basics</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a></li>
+    <li><a href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a></li>
+    <li><a href="explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Explore RHOSP networking concepts</h1>
+<div class="sect1">
+<h2 id="_explore_rhosp_networking_concepts"><a class="anchor" href="#_explore_rhosp_networking_concepts"></a>Explore RHOSP Networking Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Red Hat OpenStack Platform (RHOSP) networking is a critical aspect of its functionality, enabling communication between various components and services. This section will delve into the fundamental networking concepts in RHOSP, including network types, segmentation, and load balancing.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_network_types"><a class="anchor" href="#_1_network_types"></a>1. Network Types</h3>
+<div class="paragraph">
+<p>RHOSP supports multiple network types, each serving distinct purposes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Provider Networks</strong>: These networks are brought in from the underlying physical infrastructure and are typically used for access to external networks. They are often bridged directly to external networks using OVS (Open vSwitch).</p>
+</li>
+<li>
+<p><strong>Neutron Networks</strong>: These are logical networks created and managed by the Neutron service. They can be further categorized into:</p>
+</li>
+<li>
+<p><strong>Flat Network</strong>: A simple network where all VMs on the same network can talk to each other without any isolation.</p>
+</li>
+<li>
+<p><strong>VLAN Network</strong>: A network that uses VLAN tags to provide isolation between VMs on the same broadcast domain.</p>
+</li>
+<li>
+<p><strong>GRE/VXLAN Tunnels</strong>: These networks use tunneling protocols to extend networks across IP infrastructure, providing scalability and flexibility.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_network_segmentation"><a class="anchor" href="#_2_network_segmentation"></a>2. Network Segmentation</h3>
+<div class="paragraph">
+<p>Network segmentation in RHOSP is achieved through the use of projects (also known as tenants in previous OpenStack releases), users, and roles. This ensures that network resources are isolated and secure.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Projects</strong>: Projects are logical containers for resources. Each project has its own set of users, roles, and network resources.</p>
+</li>
+<li>
+<p><strong>Users and Roles</strong>: Users are assigned roles that define their level of access to resources within a project. This ensures that only authorized users can perform specific actions on network resources.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_load_balancing"><a class="anchor" href="#_3_load_balancing"></a>3. Load Balancing</h3>
+<div class="paragraph">
+<p>Load balancing in RHOSP is facilitated by the Octavia service, which provides a robust, extensible, and highly available load balancing solution. Octavia supports various load balancing algorithms, including round robin, least connections, and source IP hash.</p>
+</div>
+<div class="sect3">
+<h4 id="_hands_on_lab_configuring_networking_in_rhosp"><a class="anchor" href="#_hands_on_lab_configuring_networking_in_rhosp"></a>Hands-on Lab: Configuring Networking in RHOSP</h4>
+<div class="paragraph">
+<p><strong>Objective</strong>: To configure a basic network in RHOSP and understand its components.</p>
+</div>
+<div class="paragraph">
+<p><strong>Steps</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Login to the RHOSP Dashboard</strong>: Access the RHOSP dashboard using your credentials.</p>
+</li>
+<li>
+<p><strong>Create a Network</strong>: Navigate to "Project" &#8594; "Networking" &#8594; "Networks#  Explore RHOSP networking concepts</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explore_rhosp_networking_concepts_2"><a class="anchor" href="#_explore_rhosp_networking_concepts_2"></a>Explore RHOSP Networking Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Red Hat OpenStack Platform (RHOSP) networking is a critical aspect of its functionality, enabling communication between various components and services. This section will delve into the fundamental networking concepts in RHOSP, including network types, segmentation, and load balancing.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_network_types_2"><a class="anchor" href="#_1_network_types_2"></a>1. Network Types</h3>
+<div class="paragraph">
+<p>RHOSP supports multiple network types, each serving distinct purposes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Provider Networks</strong>: These networks are brought in from the underlying physical infrastructure and are typically used for access to external networks. They are often bridged directly to external networks using OVS (Open vSwitch).</p>
+</li>
+<li>
+<p><strong>Neutron Networks</strong>: These are software-defined networks (SDN) managed by the Neutron service. They offer more flexibility and isolation compared to provider networks. Neutron networks can be further segmented using subnets and VLANs.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_network_segmentation_2"><a class="anchor" href="#_2_network_segmentation_2"></a>2. Network Segmentation</h3>
+<div class="paragraph">
+<p>Network segmentation is crucial for security and performance in RHOSP. It involves dividing a network into sub-networks, each isolated from the others.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>VLANs (Virtual Local Area Networks)</strong>: VLANs allow multiple logical networks to coexist on the same physical infrastructure. In RHOSP, VLANs are used to segment traffic within a Neutron network.</p>
+</li>
+<li>
+<p><strong>Subnets</strong>: A subnet is a range of IP addresses used within a Neutron network. Subnets help in organizing and managing IP addresses, facilitating network segmentation.</p>
+</li>
+<li>
+<p><strong>Project Networks</strong>: These are private networks dedicated to individual projects, providing isolation and security.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_load_balancing_2"><a class="anchor" href="#_3_load_balancing_2"></a>3. Load Balancing</h3>
+<div class="paragraph">
+<p>Load balancing distributes incoming network traffic across multiple compute instances to ensure no single instance bears too much demand. RHOSP uses the Octavia load balancer service for this purpose.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Load Balancer as a Service (LBaaS)</strong>: Octavia, the LBaaS component in RHOSP, provides scalable, high-performance load balancing. It supports various algorithms for distributing traffic, including round robin, source IP hash, and least connections.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hands_on_lab_configuring_networking_in_rhosp_2"><a class="anchor" href="#_hands_on_lab_configuring_networking_in_rhosp_2"></a>Hands-on Lab: Configuring Networking in RHOSP</h3>
+<div class="paragraph">
+<p><strong>Objective:</strong> Configure a basic Neutron network, subnet, and router, and set up a load balancer using Octavia.</p>
+</div>
+<div class="sect3">
+<h4 id="_step_1_create_a_neutron_network_and_subnet"><a class="anchor" href="#_step_1_create_a_neutron_network_and_subnet"></a>Step 1: Create a Neutron Network and Subnet</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log in</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a></span>
+  <span class="next"><a href="understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

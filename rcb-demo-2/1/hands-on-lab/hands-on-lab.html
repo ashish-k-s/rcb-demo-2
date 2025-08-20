@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hands-on Lab :: Red Hat OpenStack Platform (RHOSP) Basics</title>
+    <link rel="prev" href="../understand-the-architecture-and-components-of-rhosp/explore-rhosp-networking-concepts.html">
+    <link rel="next" href="setting-up-a-rhosp-environment.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenStack Platform (RHOSP) Basics</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rcb-demo-2" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../understand-the-architecture-and-components-of-rhosp/understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-architecture-and-components-of-rhosp/learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-architecture-and-components-of-rhosp/explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../understand-the-architecture-and-components-of-rhosp/understand-the-architecture-and-components-of-rhosp.html">Understand the architecture and components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-architecture-and-components-of-rhosp/learn-to-install-and-configure-rhosp.html">Learn to install and configure RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-architecture-and-components-of-rhosp/explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-networking.html">Configuring Networking</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="hands-on-lab.html">Hands-on Lab</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="configuring-networking.html">Configuring Networking</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenStack Platform (RHOSP) Basics</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Basics</a></li>
+    <li><a href="hands-on-lab.html">Hands-on Lab</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Hands-on Lab</h1>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Hands-on Lab</strong> is a practical, applied section of the Red Hat OpenStack Platform (RHOSP) training, designed to provide learners with real-world experience.</p>
+</li>
+<li>
+<p>It involves <strong>Setting up a RHOSP Environment</strong>, guiding users through the process of deploying and initializing their own OpenStack cloud.</p>
+</li>
+<li>
+<p>Additionally, it covers <strong>Configuring Networking</strong> in RHOSP, enabling learners to understand and manage network services such as routing, switching, and firewalls.</p>
+</li>
+<li>
+<p>This lab is crucial for reinforcing the theoretical knowledge gained from understanding RHOSP architecture and components.</p>
+</li>
+<li>
+<p>It offers a risk-free environment to practice installation and configuration tasks, ensuring learners are well-prepared to handle similar scenarios in a production setting.</p>
+</li>
+<li>
+<p>The lab is structured to align with the overall training objectives, focusing on key areas like RHOSP networking concepts.</p>
+</li>
+<li>
+<p>By the end of this lab, learners should be able to independently set up and configure a basic RHOSP environment, demonstrating a solid grasp of RHOSP&#8217;s networking capabilities.#  Hands-on Lab</p>
+</li>
+<li>
+<p><strong>Hands-on Lab</strong> is a practical, applied section of the Red Hat OpenStack Platform (RHOSP) training, designed to provide learners with real-world experience.</p>
+</li>
+<li>
+<p>It involves <strong>Setting up a RHOSP Environment</strong>, guiding users through the process of deploying and initializing their own OpenStack cloud.</p>
+</li>
+<li>
+<p>Additionally, it covers <strong>Configuring Networking</strong> in RHOSP, enabling learners to understand and manage network services such as routing, switching, and firewalls.</p>
+</li>
+<li>
+<p>This lab is crucial for reinforcing the theoretical knowledge gained from understanding RHOSP architecture and components.</p>
+</li>
+<li>
+<p>It offers a risk-free environment to practice installation and configuration tasks, ensuring learners are well-prepared to handle similar scenarios in a production setting.</p>
+</li>
+<li>
+<p>The lab is structured to align with the overall training objectives, focusing on key areas like RHOSP networking concepts.</p>
+</li>
+<li>
+<p>By the end of this lab, learners should be able to independently set up and configure a basic RHOSP environment, demonstrating a solid grasp of RHOSP&#8217;s networking capabilities.</p>
+</li>
+</ul>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../understand-the-architecture-and-components-of-rhosp/explore-rhosp-networking-concepts.html">Explore RHOSP networking concepts</a></span>
+  <span class="next"><a href="setting-up-a-rhosp-environment.html">Setting up a RHOSP Environment</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

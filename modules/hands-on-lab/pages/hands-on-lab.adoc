@@ -6,4 +6,12 @@
   - This lab is crucial for reinforcing the theoretical knowledge gained from understanding RHOSP architecture and components.
   - It offers a risk-free environment to practice installation and configuration tasks, ensuring learners are well-prepared to handle similar scenarios in a production setting.
   - The lab is structured to align with the overall training objectives, focusing on key areas like RHOSP networking concepts.
+  - By the end of this lab, learners should be able to independently set up and configure a basic RHOSP environment, demonstrating a solid grasp of RHOSP's networking capabilities.#  Hands-on Lab
+
+- **Hands-on Lab** is a practical, applied section of the Red Hat OpenStack Platform (RHOSP) training, designed to provide learners with real-world experience.
+  - It involves **Setting up a RHOSP Environment**, guiding users through the process of deploying and initializing their own OpenStack cloud.
+  - Additionally, it covers **Configuring Networking** in RHOSP, enabling learners to understand and manage network services such as routing, switching, and firewalls.
+  - This lab is crucial for reinforcing the theoretical knowledge gained from understanding RHOSP architecture and components.
+  - It offers a risk-free environment to practice installation and configuration tasks, ensuring learners are well-prepared to handle similar scenarios in a production setting.
+  - The lab is structured to align with the overall training objectives, focusing on key areas like RHOSP networking concepts.
   - By the end of this lab, learners should be able to independently set up and configure a basic RHOSP environment, demonstrating a solid grasp of RHOSP's networking capabilities.

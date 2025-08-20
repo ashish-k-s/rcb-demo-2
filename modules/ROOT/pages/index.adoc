@@ -17,6 +17,10 @@ Duration: FIXME hours
 
 *  Hands-on Lab
 
+*  Understand the architecture and components of RHOSP
+
+*  Hands-on Lab
+
 
 
 == Prerequisites

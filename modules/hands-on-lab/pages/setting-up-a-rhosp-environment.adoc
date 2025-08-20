@@ -58,4 +58,64 @@ The director is a component of the undercloud that manages the overcloud.
 3. Deploy the overcloud:
 
    ```bash
+   sudo openstack overcloud deploy --templates --ntp-server 0.redhat.pool.ntp.org --network-file /home/stack/templates/overcloud/network/#  Setting up a RHOSP Environment
+
+== Setting Up a RHOSP Environment
+
+In this hands-on activity, you will learn how to set up a Red Hat OpenStack Platform (RHOSP) environment. This process involves installing and configuring the necessary components to create a functional RHOSP cloud.
+
+### Prerequisites
+
+Before starting, ensure you have the following:
+
+1. A system with at least 16GB RAM (recommended 32GB).
+2. Four virtual machines (or bare-metal servers) with the following specifications:
+   - 4 CPUs each
+   - 16GB RAM each
+   - 100GB disk space each
+3. A network connection between all systems.
+4. A Red Hat Enterprise Linux (RHEL) 8 server for the undercloud installation.
+5. A user with sudo privileges on all systems.
+
+### Step 1: Prepare the Undercloud
+
+The undercloud is the control node that manages the overcloud (the actual OpenStack services). Begin by preparing your RHEL 8 server as the undercloud.
+
+1. Register the undercloud server with Red Hat Subscription Manager:
+
+   ```bash
+   subscription-manager register --username <username> --password <password>
+   ```
+
+2. Attach the RHOSP subscription:
+
+   ```bash
+   subscription-manager attach --pool=<pool_id>
+   ```
+
+3. Install the necessary packages:
+
+   ```bash
+   sudo dnf install -y http://<your-rhel-server>/rhoso-install/el8/os/x86_64/openstack-16/os-collect-config
+   ```
+
+### Step 2: Install and Configure Director
+
+The director is a component of the undercloud that manages the overcloud.
+
+1. Install the director packages:
+
+   ```bash
+   sudo dnf install -y openstack-tripleo-puppet
+   ```
+
+2. Set up the director configuration:
+
+   ```bash
+   sudo openstack tripleo deploy --config-file /home/stack/templates/overcloud/config.yaml --output-dir /home/stack/templates/overcloud/ --timeout 120
+   ```
+
+3. Deploy the overcloud:
+
+   ```bash
    sudo openstack overcloud deploy --templates --ntp-server 0.redhat.pool.ntp.org --network-file /home/stack/templates/overcloud/network/

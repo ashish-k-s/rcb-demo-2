@@ -52,4 +52,58 @@ Replace `<router_name>` with the desired name for your router.
 
 #### Step 4: Add Interfaces to the Router
 
-Add interfaces to
+Add interfaces to#  Configuring Networking
+
+## Configuring Networking in Red Hat OpenStack Platform (RHOSP)
+
+### Overview
+
+Networking is a fundamental aspect of Red Hat OpenStack Platform (RHOSP). It involves configuring various components to ensure seamless communication between different services and instances. This section will guide you through the process of configuring networking in RHOSP, focusing on key concepts and practical hands-on activities.
+
+### Key Networking Components
+
+1. **OpenStack Networking (Neutron):** Neutron is the core networking service in RHOSP. It provides a robust, scalable, and standards-based solution for network connectivity as a service.
+
+2. **Network Types:** RHOSP supports multiple network types, including Flat, VLAN, VXLAN, and GRE. Each type has its unique characteristics and use cases.
+
+3. **Subnets:** Subnets are IP networks created within the OpenStack environment. They are used to allocate IP addresses to instances and other services.
+
+4. **Routers:** Routers facilitate communication between different subnets and networks, enabling instances to communicate with external networks.
+
+5. **Security Groups and Rules:** Security groups act as firewalls for your instances, controlling inbound and outbound traffic based on rules you define.
+
+### Configuring Networking
+
+#### Step 1: Create a Network
+
+To create a new network, use the following command:
+
+```bash
+openstack network create --provider physical-network <network_name> --share
+```
+
+Replace `<network_name>` with the desired name for your network. The `--share` option makes the network available to all projects.
+
+#### Step 2: Create a Subnet
+
+Next, create a subnet within the newly created network:
+
+```bash
+openstack subnet create --network <network_name> --subnet-range <subnet_range> <subnet_name>
+```
+
+Replace `<network_name>` with the name of your network, `<subnet_range>` with the IP range for the subnet, and `<subnet_name>` with the desired name for the subnet.
+
+#### Step 3: Create a Router
+
+Create a router to manage traffic between different networks:
+
+```bash
+openstack router create <router_name>
+```
+
+Replace `<router_name>` with the desired name for your router.
+
+#### Step 4: Add Interfaces to the Router
+
+Attach
